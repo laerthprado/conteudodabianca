@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Redirecionamento de WhatsApp</title>
+	<script type="text/javascript">
+		var counter = 0;
+		var links = [
+			"https://wa.me/5527999712362?text=Oi%20Bianca%2C%20quero%20saber%20mais%20sobre%20seus%20conte%C3%BAdos...",
+			"https://wa.me/5527993114414?text=Oi%20Bianca%2C%20quero%20saber%20mais%20sobre%20seus%20conte%C3%BAdos...",
+			"https://wa.me/5527992357654?text=Oi%20Bianca%2C%20quero%20saber%20mais%20sobre%20seus%20conte%C3%BAdos...",
+			"https://wa.me/5511973204038?text=Oi%20Bianca%2C%20quero%20saber%20mais%20sobre%20seus%20conte%C3%BAdos..."
+		];
+		function redirect() {
+			counter++;
+			if (counter > 30) {
+				counter = 1;
+			}
+			document.getElementById("whatsappLink").href = links[counter - 1];
+			document.getElementById("whatsappLink").click();
+		}
+	</script>
+</head>
+<body onload="redirect();">
+	<a id="whatsappLink" href="#" target="_blank"></a>
+</body>
+</html>
